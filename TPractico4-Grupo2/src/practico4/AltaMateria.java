@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Cetera Evelyn
+ * @author Grupo 2
  */
 public class AltaMateria extends javax.swing.JInternalFrame {
     HashSet <Materia> materias;
