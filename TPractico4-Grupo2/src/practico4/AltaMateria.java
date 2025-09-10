@@ -136,11 +136,26 @@ public class AltaMateria extends javax.swing.JInternalFrame {
 
     private void jButtonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGuardarActionPerformed
         // TODO add your handling code here - BOTON GUARDAR:
-        Integer id = Integer.valueOf(jTextFieldCodigo.getText());
-        String nombre = jTextFieldMateria.getText();
-        Integer anio = Integer.valueOf(jTextFieldAnio.getText());
-        materias.add(new Materia(id, nombre,anio));
-        JOptionPane.showMessageDialog(this, "La materia se ha agregado correctamente");
+        try{
+            Integer id = Integer.valueOf(jTextFieldCodigo.getText());
+            String nombre = jTextFieldMateria.getText();
+            Integer anio = Integer.valueOf(jTextFieldAnio.getText());
+            if(nombre.matches("^[\\d\\p{Punct}]+$")){
+                JOptionPane.showMessageDialog(this, "Formato incorrecto.Intente nuevamente"); 
+            }
+            else{
+                Materia materia = new Materia(id, nombre,anio);
+                boolean agregado = materias.add(materia);
+                if(!agregado){
+                    JOptionPane.showMessageDialog(this, "Ya existe materia con ese id");
+                }else{
+                    JOptionPane.showMessageDialog(this, "Materia agregada corectamente");
+                }
+                    
+            }
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(this, "Formato incorrecto.Intente nuevamente");  
+        }
        
     }//GEN-LAST:event_jButtonGuardarActionPerformed
 
