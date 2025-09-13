@@ -11,28 +11,28 @@
 nbproject/private/ 
 nbproject/project.properties 
 nbproject/build-impl.xml
-# === Compilados de Java ===
-*.class
+
 # === Carpetas de salida === 
 build/ 
 dist/ 
 out/ 
 target/
+
 # === Archivos temporales === 
 *.log 
 *.bak 
 *.tmp 
 *.swp 
 *~ 
+
 # === Configuración de otros IDEs === 
 *.iml 
 .idea/ 
 .vscode/ 
+
 # === Archivos del sistema operativo === 
 .DS_Store 
-Thumbs.db
 
-### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
 Thumbs.db:encryptable
@@ -61,6 +61,4 @@ $RECYCLE.BIN/
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
-/TPractico4/build/
-/TPractico4/nbproject/private/
-/TPractico4-Grupo2/nbproject/private/
+
